@@ -15,7 +15,7 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <java.version>22</java.version>
+        <java.version>23</java.version>
     </properties>
 
     <build>
@@ -25,7 +25,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <jvmArguments>
-                        -XX:+UseZGC -XX:+PrintCommandLineFlags -XX:MaxGCPauseMillis=200 -Xlog:gc*:file=gc.log:tags,uptime,time,level
+                        -XX:+UseZGC -XX:+PrintCommandLineFlags -XX:MaxGCPauseMillis=200 -XX:NativeMemoryTracking=detail -Xlog:gc*:file=gc.log:tags,uptime,time,level
                     </jvmArguments>
                     <excludes>
                         <exclude>
